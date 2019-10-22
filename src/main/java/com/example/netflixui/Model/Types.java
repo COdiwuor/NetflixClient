@@ -26,4 +26,12 @@ public class Types {
     public void setTypeName(String typeName) {
         this.typeName = typeName;
     }
+
+    @Override
+    public String toString() {
+        return "Types{" +
+                "id=" + id +
+                ", typeName='" + typeName + '\'' +
+                '}';
+    }
 }
