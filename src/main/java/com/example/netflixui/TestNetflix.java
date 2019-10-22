@@ -26,23 +26,21 @@ public class TestNetflix implements CommandLineRunner {
         //Create a movie
         Movies movies1 = new Movies("Terminator","Arnold", new Types("original"),new Categories("SCIFI"),new Users(3,"Cyril"));
         movies.add(movies1);
+        //feignRestClient.createMovie((long) 3, movies1);
+        // System.err.println("========>>>"+movies1.toString());
 
         // update a movie
+        //feignRestClient.update((long) 3,movies1);
 
         //Delete a movie
-
-//        feignRestClient.createMovie((long) 3, movies1);
-//        System.err.println("========>>>"+movies1.toString());
-//
-//        feignRestClient.update((long) 3,movies1);
-//
-//        feignRestClient.delete(movies1);
+        //feignRestClient.delete(movies1);
 
         //search movie by name
         List<Movies> moviesList = feignRestClient.searchByName("Expandables");
         System.out.println(moviesList);
 
 
+        //create a user
 
 
 
