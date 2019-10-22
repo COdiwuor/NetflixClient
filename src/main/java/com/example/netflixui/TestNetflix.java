@@ -24,12 +24,6 @@ public class TestNetflix implements CommandLineRunner {
         List<Movies> movies=feignRestClient.getAllMovies();
         System.out.println("Movies:" +movies.toString());
 
-        //Create a movie
-        Movies movies1 = new Movies("Terminator","Arnold", new Types("original"),new Categories("SCIFI"),new Users(3,"Cyril"));
-       // movies.add(movies1);
-        //feignRestClient.createMovie((long) 3, movies1);
-        // System.err.println("========>>>"+movies1.toString());
-
         // update a movie
         //feignRestClient.update((long) 3,movies1);
 
@@ -41,13 +35,19 @@ public class TestNetflix implements CommandLineRunner {
         System.out.println(moviesList);
 
         //Register a user
-        Users users1= new Users(2144,"Cyril Owuor");
-        users1=feignRestClient.createUser(users1);
-        System.out.println("Created User :"+users1.toString());
+        //Users users1= new Users(2144,"Cyril Owuor");
+        //users1=feignRestClient.createUser(users1);
+        //System.out.println("Created User :"+users1.toString());
 
         //List all users
         List<Users> users = feignRestClient.getAllUsers();
         System.out.println("Users created"+users.toString());
+
+        //Create a movie
+        //Movies movies1 = new Movies("Terminator","Arnold", null,null,null);
+        //movies1=feignRestClient.createMovie((long) 7, movies1);
+        //System.err.println("========>>>"+movies1.toString());
+
 
 
 
