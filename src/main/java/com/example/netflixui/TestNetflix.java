@@ -48,6 +48,9 @@ public class TestNetflix implements CommandLineRunner {
         //movies1=feignRestClient.createMovie((long) 7, movies1);
         //System.err.println("========>>>"+movies1.toString());
 
+        //Get a user by idno
+
+
 
 
 
