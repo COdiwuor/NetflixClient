@@ -47,7 +47,7 @@ public interface FeignRestClient {
 
     //Register a user
     @RequestMapping(method = RequestMethod.POST, value = "users")
-    Users createUser(@RequestParam(value = "userid") long userid, @RequestBody Users users);
+    Users createUser(@RequestBody Users users);
 
     //Endpoints for Categories
     //List Categories

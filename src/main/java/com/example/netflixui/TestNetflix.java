@@ -1,6 +1,7 @@
 package com.example.netflixui;
 
 import com.example.netflixui.Model.*;
+import org.apache.catalina.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -25,7 +26,7 @@ public class TestNetflix implements CommandLineRunner {
 
         //Create a movie
         Movies movies1 = new Movies("Terminator","Arnold", new Types("original"),new Categories("SCIFI"),new Users(3,"Cyril"));
-        movies.add(movies1);
+       // movies.add(movies1);
         //feignRestClient.createMovie((long) 3, movies1);
         // System.err.println("========>>>"+movies1.toString());
 
@@ -39,9 +40,14 @@ public class TestNetflix implements CommandLineRunner {
         List<Movies> moviesList = feignRestClient.searchByName("Expandables");
         System.out.println(moviesList);
 
+        //Register a user
+        Users users1= new Users(2144,"Cyril Owuor");
+        users1=feignRestClient.createUser(users1);
+        System.out.println("Created User :"+users1.toString());
 
-        //create a user
-
+        //List all users
+        List<Users> users = feignRestClient.getAllUsers();
+        System.out.println("Users created"+users.toString());
 
 
 
