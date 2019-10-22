@@ -27,6 +27,10 @@ public class TestNetflix implements CommandLineRunner {
         Movies movies1 = new Movies("Terminator","Arnold", new Types("original"),new Categories("SCIFI"),new Users(3,"Cyril"));
         movies.add(movies1);
 
+        // update a movie
+
+        //Delete a movie
+
 //        feignRestClient.createMovie((long) 3, movies1);
 //        System.err.println("========>>>"+movies1.toString());
 //
@@ -34,9 +38,8 @@ public class TestNetflix implements CommandLineRunner {
 //
 //        feignRestClient.delete(movies1);
 
-        //search by name
+        //search movie by name
         List<Movies> moviesList = feignRestClient.searchByName("Expandables");
-        
         System.out.println(moviesList);
 
 
