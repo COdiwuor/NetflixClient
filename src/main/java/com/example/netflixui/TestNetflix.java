@@ -24,7 +24,9 @@ public class TestNetflix implements CommandLineRunner {
         System.out.println("Movies:" +movies.toString());
 
         // update a movie
-        //feignRestClient.update((long) 3,movies1);
+        //Movies updatedMovie = new Movies("Avengers","Chris Evans",null,null,null);
+        //updatedMovie = feignRestClient.update((long)8, updatedMovie);
+        //System.out.println("Updated Movie"+updatedMovie.toString());
 
         //Delete a movie
         //feignRestClient.delete(movies1);
@@ -34,7 +36,7 @@ public class TestNetflix implements CommandLineRunner {
         System.out.println(moviesList);
 
         //Register a user
-        //Users users1= new Users(2145,"Geofrey Muinde");
+        //Users users1= new Users(2146,"Sharon Kirigo");
         //users1=feignRestClient.createUser(users1);
         //System.out.println("Created User :"+users1.toString());
 
@@ -48,8 +50,8 @@ public class TestNetflix implements CommandLineRunner {
         //System.err.println("========>>>"+movies1.toString());
 
         //Get a user by idno
-        //Object url = "https://springbootapi.herokuapp.com";
-        //String byId = String.format(url + "/movies/%s",restTemplate.getBody().get(0).getId());
+        Users thisUser = feignRestClient.findById((long) 10);
+        System.out.println("Searched user" +thisUser.toString());
 
 
 

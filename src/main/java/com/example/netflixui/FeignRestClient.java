@@ -24,12 +24,12 @@ public interface FeignRestClient {
     Movies createMovie(@RequestParam(value ="idno") long idno, @RequestBody Movies movies);
 
     //updating a movie
-    @RequestMapping(method = RequestMethod.PATCH, value = "movies/{idno}")
-    Movies update(@PathVariable("idno") Long idno , @RequestBody Movies movies);
+    @RequestMapping(method = RequestMethod.PATCH, value = "movies")
+    Movies update(@RequestParam("idno") Long idno , @RequestBody Movies movies);
 
     //Deleting a movie
     @RequestMapping(method = RequestMethod.DELETE,value = "movies")
-    Movies delete(@RequestBody Movies movies);
+    Movies delete(@PathVariable(name = "id") Long id,@RequestParam(name = "idno")Integer idno);
 
     //Search by name
     @RequestMapping(method = RequestMethod.GET, value = "movies/search")
@@ -46,7 +46,7 @@ public interface FeignRestClient {
     List<Users> getAllUsers();
 
     //Get a user by Idno
-    @RequestMapping(method = RequestMethod.GET, value = "user/{id}")
+    @RequestMapping(method = RequestMethod.GET, value = "users/{id}")
     Users findById(@PathVariable(name = "id")Long id);
 
     //Register a user
