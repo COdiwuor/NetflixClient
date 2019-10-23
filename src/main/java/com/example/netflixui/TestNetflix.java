@@ -35,7 +35,7 @@ public class TestNetflix implements CommandLineRunner {
         System.out.println(moviesList);
 
         //Register a user
-        //Users users1= new Users(2144,"Cyril Owuor");
+        //Users users1= new Users(2145,"Geofrey Muinde");
         //users1=feignRestClient.createUser(users1);
         //System.out.println("Created User :"+users1.toString());
 
