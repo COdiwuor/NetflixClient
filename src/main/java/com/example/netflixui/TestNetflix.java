@@ -49,6 +49,10 @@ public class TestNetflix implements CommandLineRunner {
         //System.err.println("========>>>"+movies1.toString());
 
         //Get a user by idno
+        //Object url = "https://springbootapi.herokuapp.com";
+        //String byId = String.format(url + "/movies/%s",restTemplate.getBody().get(0).getId());
+
+
 
 
 
