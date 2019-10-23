@@ -1,7 +1,6 @@
 package com.example.netflixui;
 
 import com.example.netflixui.Model.*;
-import org.apache.catalina.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;

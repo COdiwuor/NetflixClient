@@ -35,6 +35,10 @@ public interface FeignRestClient {
     @RequestMapping(method = RequestMethod.GET, value = "movies/search")
     List<Movies> searchByName(@RequestParam(value = "name")String name);
 
+    //Get movies by id
+    @RequestMapping(method = RequestMethod.GET, value = "movies/{idno}")
+    Movies findByid(@PathVariable(name = "idno") Long idno);
+
 
     //Endpoints of users
     //list all the users
@@ -43,7 +47,7 @@ public interface FeignRestClient {
 
     //Get a user by Idno
     @RequestMapping(method = RequestMethod.GET, value = "user/{id}")
-    Users findById(@PathVariable(name = "idno")Long idno);
+    Users findById(@PathVariable(name = "id")Long id);
 
     //Register a user
     @RequestMapping(method = RequestMethod.POST, value = "users")
