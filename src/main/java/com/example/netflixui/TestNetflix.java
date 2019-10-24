@@ -20,8 +20,8 @@ public class TestNetflix implements CommandLineRunner {
         RestTemplate restTemplate = new RestTemplate();
 
         //List of movies
-        List<Movies> movies=feignRestClient.getAllMovies();
-        System.out.println("Movies:" +movies.toString());
+//        List<Movies> movies=feignRestClient.getAllMovies();
+//        System.out.println("Movies:" +movies.toString());
 
         // update a movie
         //Movies updatedMovie = new Movies("Avengers","Chris Evans",null,null,null);
@@ -32,8 +32,8 @@ public class TestNetflix implements CommandLineRunner {
         //feignRestClient.delete(movies1);
 
         //search movie by name
-        List<Movies> moviesList = feignRestClient.searchByName("Terminator");
-        System.out.println(moviesList);
+//        List<Movies> moviesList = feignRestClient.searchByName("Terminator");
+//        System.out.println(moviesList);
 
 
 
@@ -54,10 +54,10 @@ public class TestNetflix implements CommandLineRunner {
         System.out.println(categories);
 
        // Create a movie
-         Movies movies1 = new Movies("Jumanji","Dwane Johnsone ", types.get(0),categories.get(0),users.get(1));
-         System.out.println(movies1);
-         Movies created =feignRestClient.createMovie(users.get(0).getIdNumber(), movies1);
-         System.out.println("Movie created"+created.toString());
+//         Movies movies1 = new Movies("Jumanji","Dwane Johnsone ", types.get(0),categories.get(0),users.get(1));
+//         System.out.println(movies1);
+//         Movies created =feignRestClient.createMovie(users.get(0).getIdNumber(), movies1);
+//         System.out.println("Movie created"+created.toString());
 
         //Get a user by idno
         //Users thisUser = feignRestClient.findById((long) 10);

@@ -1,18 +1,25 @@
 package com.example.netflixui.Model;
 
+
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Movies {
     private long id;
     private String name;
     private String  actor;
     private Types type;
-    private Categories category;
+    List<Categories> category;
+
     private Users user;
 
-    public Movies(String name, String actor, Types type, Categories category, Users user) {
+    public Movies(String name, String actor, Types type, Users user) {
         this.name = name;
         this.actor = actor;
         this.type = type;
-        this.category = category;
         this.user = user;
     }
 
@@ -51,13 +58,13 @@ public class Movies {
         this.type = type;
     }
 
-    public Categories getCategory() {
-        return category;
-    }
+//    public List<Categories> getCategory() {
+//        return category;
+//    }
 
-    public void setCategory(Categories category) {
-        this.category = category;
-    }
+   // public void setCategory(List<Categories> category) {
+  //      this.category = category;
+   // }
 
     public Users getUser() {
         return user;
