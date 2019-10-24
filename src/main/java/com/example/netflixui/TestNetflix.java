@@ -35,6 +35,8 @@ public class TestNetflix implements CommandLineRunner {
         List<Movies> moviesList = feignRestClient.searchByName("Expandables");
         System.out.println(moviesList);
 
+
+
         //Register a user
         //Users users1= new Users(2146,"Sharon Kirigo");
         //users1=feignRestClient.createUser(users1);
@@ -44,14 +46,22 @@ public class TestNetflix implements CommandLineRunner {
         List<Users> users = feignRestClient.getAllUsers();
         System.out.println("Users created"+users.toString());
 
-        //Create a movie
-        //Movies movies1 = new Movies("Terminator","Arnold", null,null,null);
-        //movies1=feignRestClient.createMovie((long) 7, movies1);
-        //System.err.println("========>>>"+movies1.toString());
+        List<Types> types = feignRestClient.getAllTypes();
+        System.out.println(types);
+
+
+        List<Categories> categories = feignRestClient.getAllCategories();
+        System.out.println(categories);
+
+       // Create a movie
+         Movies movies1 = new Movies("Avengers","Chris Evans ", types.get(0),categories.get(0),users.get(1));
+        System.out.println(movies1);
+        Movies created =feignRestClient.createMovie(users.get(0).getIdNumber(), movies1);
+        System.out.println("Movie created"+created.toString());
 
         //Get a user by idno
-        Users thisUser = feignRestClient.findById((long) 10);
-        System.out.println("Searched user" +thisUser.toString());
+        //Users thisUser = feignRestClient.findById((long) 10);
+        //System.out.println("Searched user" +thisUser.toString());
 
 
 
