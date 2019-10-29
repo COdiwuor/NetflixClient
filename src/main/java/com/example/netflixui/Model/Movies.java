@@ -12,7 +12,7 @@ public class Movies {
     private String name;
     private String  actor;
     private Types type;
-    List<Categories> category;
+    List<Categories> category = new ArrayList<>();
 
     private Users user;
 
@@ -58,13 +58,13 @@ public class Movies {
         this.type = type;
     }
 
-//    public List<Categories> getCategory() {
-//        return category;
-//    }
+    public List<Categories> getCategory() {
+        return category;
+    }
 
-   // public void setCategory(List<Categories> category) {
-  //      this.category = category;
-   // }
+    public void setCategory(List<Categories> category) {
+        this.category = category;
+    }
 
     public Users getUser() {
         return user;

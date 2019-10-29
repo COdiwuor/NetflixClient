@@ -4,6 +4,8 @@ import com.example.netflixui.Model.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -53,11 +55,20 @@ public class TestNetflix implements CommandLineRunner {
         List<Categories> categories = feignRestClient.getAllCategories();
         System.out.println(categories);
 
+         ArrayList cats = new ArrayList();
+         cats.add(2L);
+         cats.add(1L);
+
        // Create a movie
-//         Movies movies1 = new Movies("Jumanji","Dwane Johnsone ", types.get(0),categories.get(0),users.get(1));
-//         System.out.println(movies1);
-//         Movies created =feignRestClient.createMovie(users.get(0).getIdNumber(), movies1);
-//         System.out.println("Movie created"+created.toString());
+         Movies movies1 = new Movies("Test Movie","Test Actor ", types.get(0),users.get(0));
+         Movies created =feignRestClient.createMovie( movies1, users.get(0).getIdNumber(), cats);
+         System.out.println("Movie created"+created.toString());
+
+
+        //List of movies
+
+        List<Movies> movies=feignRestClient.getAllMovies();
+        System.out.println("Movies:" +movies.toString());
 
         //Get a user by idno
         //Users thisUser = feignRestClient.findById((long) 10);

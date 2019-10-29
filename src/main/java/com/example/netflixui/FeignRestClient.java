@@ -8,9 +8,10 @@ import com.example.netflixui.Model.Users;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
-@FeignClient(name = "client", url = "https://springbootapi.herokuapp.com", configuration = FeignConfig.class)
+@FeignClient(name = "client", url = "http://2d67fb7c.ngrok.io", configuration = FeignConfig.class)
 //@FeignClient(name = "client", url = "http://192.168.137.1:8080", configuration = FeignConfig.class)
 public interface FeignRestClient {
 
@@ -21,8 +22,8 @@ public interface FeignRestClient {
     List<Movies> getAllMovies();
 
     //creating a movie
-    @RequestMapping(method = RequestMethod.POST,value = "movies")
-    Movies createMovie(@RequestParam(value ="idno") long idno, @RequestBody Movies movies);
+    @RequestMapping(method = RequestMethod.POST,value = "categories/movie")
+    Movies createMovie( @RequestBody Movies movies, @RequestParam(value ="idno") Integer idno, @RequestParam(value = "cat")ArrayList<Long> cat);
 
     //updating a movie
     @RequestMapping(method = RequestMethod.PATCH, value = "movies")
