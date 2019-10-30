@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@FeignClient(name = "client", url = "http://2d67fb7c.ngrok.io", configuration = FeignConfig.class)
+@FeignClient(name = "client", url = " http://2d67fb7c.ngrok.io", configuration = FeignConfig.class)
 //@FeignClient(name = "client", url = "http://192.168.137.1:8080", configuration = FeignConfig.class)
 public interface FeignRestClient {
 
