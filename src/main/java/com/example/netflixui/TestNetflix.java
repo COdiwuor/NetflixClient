@@ -42,7 +42,7 @@ public class TestNetflix implements CommandLineRunner {
          cats.add(1L);
 
        // Create a movie
-         Movies movies1 = new Movies("Test Movie","Test Actor ", types.get(0),users.get(0));
+         Movies movies1 = new Movies("Boondocks","John WithersSpoon ", types.get(0),users.get(0));
          Movies created =feignRestClient.createMovie( movies1, users.get(0).getIdNumber(), cats);
          System.out.println("Movie created"+created.toString());
 
