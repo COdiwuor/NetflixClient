@@ -21,9 +21,6 @@ public class TestNetflix implements CommandLineRunner {
     public void run(String... args) throws Exception {
         RestTemplate restTemplate = new RestTemplate();
 
-        //List of movies
-//        List<Movies> movies=feignRestClient.getAllMovies();
-//        System.out.println("Movies:" +movies.toString());
 
         // update a movie
         //Movies updatedMovie = new Movies("Avengers","Chris Evans",null,null,null);
@@ -64,9 +61,7 @@ public class TestNetflix implements CommandLineRunner {
          Movies created =feignRestClient.createMovie( movies1, users.get(0).getIdNumber(), cats);
          System.out.println("Movie created"+created.toString());
 
-
         //List of movies
-
         List<Movies> movies=feignRestClient.getAllMovies();
         System.out.println("Movies:" +movies.toString());
 
