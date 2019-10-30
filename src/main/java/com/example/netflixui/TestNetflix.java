@@ -21,21 +21,6 @@ public class TestNetflix implements CommandLineRunner {
     public void run(String... args) throws Exception {
         RestTemplate restTemplate = new RestTemplate();
 
-
-        // update a movie
-        //Movies updatedMovie = new Movies("Avengers","Chris Evans",null,null,null);
-        //updatedMovie = feignRestClient.update((long)8, updatedMovie);
-        //System.out.println("Updated Movie"+updatedMovie.toString());
-
-        //Delete a movie
-        //feignRestClient.delete(movies1);
-
-        //search movie by name
-//        List<Movies> moviesList = feignRestClient.searchByName("Terminator");
-//        System.out.println(moviesList);
-
-
-
         //Register a user
         //Users users1= new Users(2146,"Sharon Kirigo");
         //users1=feignRestClient.createUser(users1);
@@ -64,6 +49,18 @@ public class TestNetflix implements CommandLineRunner {
         //List of movies
         List<Movies> movies=feignRestClient.getAllMovies();
         System.out.println("Movies:" +movies.toString());
+
+        // update a movie
+        //Movies updatedMovie = new Movies("Avengers","Chris Evans",null,null,null);
+        //updatedMovie = feignRestClient.update((long)8, updatedMovie);
+        //System.out.println("Updated Movie"+updatedMovie.toString());
+
+        //Delete a movie
+        //feignRestClient.delete(movies1);
+
+        //search movie by name
+//        List<Movies> moviesList = feignRestClient.searchByName("Terminator");
+//        System.out.println(moviesList);
 
         //Get a user by idno
         //Users thisUser = feignRestClient.findById((long) 10);
